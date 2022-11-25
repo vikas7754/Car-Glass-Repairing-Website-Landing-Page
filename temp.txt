@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="author_email" content="vikask4590@gmail.com" />
+    <title>Free Websitesite Builder</title>
+    <!--Stylesheets-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+
+    <!--Editor Styles-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://prelaunch-paraclete.freewebsitesite.com/Templates/css/editor_pro.css"
+    />
+
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <!-- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
+    ></script>
+    <!-- MDB core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
+    ></script>
+    <style type="text/css">
+      /* Chart.js */
+      @-webkit-keyframes chartjs-render-animation {
+        from {
+          opacity: 0.99;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes chartjs-render-animation {
+        from {
+          opacity: 0.99;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .chartjs-render-monitor {
+        -webkit-animation: chartjs-render-animation 0.001s;
+        animation: chartjs-render-animation 0.001s;
+      }
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
+
+      :root {
+        --color1: #606060ff;
+        --color2: rgb(0, 94, 19);
+        --gradient: linear-gradient(90deg, var(--color1), var(--color2));
+      }
+
+      * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        text-transform: capitalize;
+      }
+
+      *::selection {
+        background: var(--color2);
+        color: #fff;
+      }
+
+      html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+      }
+
+      body {
+        background: #f9f9f9;
+      }
+      .logo {
+        color: var(--color2);
+      }
+
+      .heading {
+        text-align: center;
+        background: var(--gradient);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        padding: 1rem;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        padding: 2rem 9%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+      }
+
+      header .logo {
+        font-size: 2rem;
+        color: var(--color1);
+      }
+
+      header .logo span {
+        color: var(--color2);
+      }
+
+      header .navbar a {
+        font-size: 1.7rem;
+        margin-left: 2rem;
+        color: var(--color1);
+      }
+
+      header .navbar a:hover {
+        color: var(--color2);
+      }
+
+      header input {
+        display: none;
+      }
+
+      header label {
+        font-size: 3rem;
+        color: var(--color1);
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+      }
+      @media (max-width: 768px) {
+        header .navbar {
+          flex-direction: column;
+        }
+
+        header label {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        header .navbar {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background: #fff;
+          padding: 1rem 2rem;
+          border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          transform-origin: top;
+          transform: scaleY(0);
+          opacity: 0;
+          transition: 0.2s linear;
+        }
+
+        header .navbar a {
+          display: block;
+          margin: 2rem 0;
+          font-size: 2rem;
+        }
+
+        header input:checked ~ .navbar {
+          transform: scaleY(1);
+          opacity: 1;
+        }
+
+        header input:checked ~ label::before {
+          content: "\f00d";
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Verdana, sans-serif;
+      }
+      .mySlides {
+        display: none;
+        width: 100%;
+      }
+      .mySlides img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .slideshow-container {
+        position: relative;
+        margin-top: 8rem;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .fade {
+        animation-name: fade;
+        animation-duration: 3.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media only screen and (max-width: 300px) {
+        .text {
+          font-size: 11px;
+        }
+      }
+      .f1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main-img img {
+        width: 100%;
+        object-fit: cover;
+        animation: float 3s linear infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0rem);
+        }
+        50% {
+          transform: translateY(-3.5rem);
+        }
+      }
+      .form-container {
+        background: rgba(0, 0, 0, 0.12);
+        padding: 15px;
+        margin: 5px;
+        border-radius: 5px;
+      }
+      .form-control {
+        height: 40px;
+      }
+      .form-control:hover {
+        outline: 1px solid rgba(39, 255, 39, 0.5);
+      }
+      .btn-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      label {
+        font-weight: 700;
+        background: transparent;
+      }
+      .btn {
+        font-size: 12px;
+      }
+      .progressx {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+      .step {
+        width: 30px;
+        height: 30px;
+        background: #ccc;
+        padding: 4px;
+      }
+      .progress-line {
+        width: 60px;
+        background: rgb(142, 142, 142);
+        height: 10px;
+      }
+      .active-progress {
+        background: blue;
+        color: #fff;
+      }
+      .active-line {
+        background: green;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://prelaunch-paraclete.freewebsitesite.com/Templates/css/template.css"
+    />
+    <!--<script src="https://prelaunch-paraclete.freewebsitesite.com/Templates/js/wow.min.js"></script>-->
+
+    <script
+      defer=""
+      async=""
+      src="https://prelaunch-paraclete.freewebsitesite.com/Templates/js/template.js"
+    ></script>
+
+    <script defer="">
+      document.oncontextmenu = function () {
+        // return false;
+      };
+      $(document).ready(function () {});
+
+      const scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#home" class="logo">
+        <span class="changed" id="try">Auto Glass Repair</span>
+      </a>
+
+      <input type="checkbox" id="menu-bar" />
+      <label for="menu-bar" class="fas fa-bars"></label>
+
+      <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#features">services</a>
+        <a href="#about">about</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </header>
+    <div class="carousel"></div>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img
+          src="https://www.freewebsitesite.com/image-gallery/img/img1669280644.png "
+        />
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img
+          src="https://www.freewebsitesite.com/image-gallery/img/img1669280619.png"
+        />
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img
+          src="https://www.freewebsitesite.com/image-gallery/img/img1669280644.png "
+        />
+        <div class="text">Caption Three</div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="row">
+        <div class="col-md f1">
+          <div class="main-img">
+            <img
+              src="https://www.freewebsitesite.com/image-gallery/img/img1668783163.png"
+            />
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-container">
+            <div class="progressx">
+              <span class="step active-progress">1</span>
+              <span class="progress-line" id="line1"></span>
+              <span class="step" id="p2">2</span>
+              <span class="progress-line" id="line2"></span>
+              <span class="step" id="p3">3</span>
+            </div>
+            <form
+              action="https://prelaunch-paraclete.freewebsitesite.com/Templates/phpAction/send_mail.php"
+              method="post"
+              onsubmit="check()"
+            >
+              <fieldset id="field1" style="display: block">
+                <h3 class="text-center">Enter Your Car Details</h3>
+                <div class="form-group">
+                  <label for="glass">Which glass is broken :</label>
+                  <select class="form-control" id="glass" name="glass">
+                    <option value="">Select an Option</option>
+                    <option value="Windshield">Windshield</option>
+                    <option value="Back Window">Back Window</option>
+                    <option value="Front Driver">Front Driver</option>
+                    <option value="Front Passenger">Front Passenger</option>
+                    <option value="Rear Driver">Rear Driver</option>
+                    <option value="Rear Passenger">Rear Passenger</option>
+                    <option value="Right Quarter">Right Quarter</option>
+                    <option value="Left Quarter">Left Quarter</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="year">Year :</label>
+                  <select name="year" id="year" class="form-control">
+                    <option value="">Select year</option>
+                  </select>
+                </div>
+                <div class="form-group mt-4">
+                  <label for="make">Make :</label>
+                  <select name="make" id="make" class="form-control">
+                    <option value="">Select make</option>
+                  </select>
+                </div>
+                <div class="form-group mt-4">
+                  <label for="model">Model :</label>
+                  <select name="model" id="model" class="form-control">
+                    <option value="">Select model</option>
+                  </select>
+                </div>
+                <div class="form-group mt-4">
+                  <label for="style">Style :</label>
+                  <select name="style" id="style" class="form-control">
+                    <option value="">Select style</option>
+                  </select>
+                </div>
+                <div class="btn-group mt-4">
+                  <span
+                    class="btn btn-primary"
+                    id="next1"
+                    onclick="showField2()"
+                  >
+                    Continue
+                  </span>
+                </div>
+              </fieldset>
+              <fieldset id="field2" style="display: none">
+                <h3 class="text-center">Enter Your Personal Details</h3>
+                <div class="form-group">
+                  <label for="name" class="label">Name :</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email :</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Your email address"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="mobno">Mobile no. :</label>
+                  <input
+                    type="tel"
+                    name="mobno"
+                    id="mobno"
+                    class="form-control"
+                    placeholder="Your mobile no."
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="">Message :</label>
+                  <textarea
+                    name="msg"
+                    id="msg"
+                    rows="4"
+                    class="form-control"
+                    placeholder="Enter your message"
+                  ></textarea>
+                </div>
+                <div class="btn-group">
+                  <span
+                    id="back1"
+                    class="btn btn-outline-danger m-2"
+                    onclick="back1()"
+                  >
+                    << Back
+                  </span>
+                  <span
+                    id="next2"
+                    class="btn btn-primary m-2"
+                    onclick="showField3()"
+                  >
+                    Next >>
+                  </span>
+                </div>
+              </fieldset>
+              <fieldset id="field3" style="display: none">
+                <h3 class="text-center">Your Preference</h3>
+                <div class="form-group" id="radio-btn">
+                  <label class="radio active" style="margin-right: 15px"
+                    ><input type="radio" name="at" id="at-shop" checked="" />
+                    repair at shop</label
+                  >
+                  <label class="radio active"
+                    ><input type="radio" name="at" id="at-home" /> Repair at
+                    home</label
+                  >
+                </div>
+                <div class="form-group">
+                  <div id="repair-address" style="display: none">
+                    <label class="active changed" for="repairAddress"
+                      >Your Address :</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="raddr"
+                      placeholder="Enter your address"
+                      name="repairAddress"
+                    />
+                  </div>
+                  <div id="repair-date" style="display: block" class="mt-2">
+                    <label class="active changed" for="repairDate"
+                      >Date and Time :</label
+                    >
+                    <input
+                      type="datetime-local"
+                      class="form-control"
+                      name="repairDate"
+                      id="date"
+                    />
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <span
+                    class="btn btn-outline-danger m-2"
+                    id="back2"
+                    onclick="back2()"
+                  >
+                    << Back
+                  </span>
+                  <input
+                    type="submit"
+                    class="btn btn-success m-2"
+                    value="Submit"
+                  />
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.freewebsitesite.com/prelaunch/Templates/phpAction/script.js?v=123456"></script>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3500);
+      }
+    </script>
+    <script>
+      let radio = document.getElementById("radio-btn");
+      radio.onchange = function () {
+        if (document.getElementById("at-home").checked) {
+          document.getElementById("repair-address").style.display = "block";
+        } else {
+          document.getElementById("repair-date").style.display = "block";
+          document.getElementById("repair-address").style.display = "none";
+          document.getElementById("raddr").value = "";
+        }
+      };
+    </script>
+    <script>
+      let field1 = document.getElementById("field1");
+      let field2 = document.getElementById("field2");
+      let field3 = document.getElementById("field3");
+      function showField2() {
+        if (
+          document.getElementById("glass").value === "" ||
+          document.getElementById("year").value === "" ||
+          document.getElementById("make").value === "" ||
+          document.getElementById("model").value === "" ||
+          document.getElementById("style").value === ""
+        ) {
+          alert("All fields are required.");
+        } else {
+          field1.style.display = "none";
+          field2.style.display = "block";
+          field3.style.display = "none";
+          document.getElementById("p2").classList.add("active-progress");
+          document.getElementById("line1").classList.add("active-line");
+        }
+      }
+      function showField3() {
+        if (
+          document.getElementById("name").value === "" ||
+          document.getElementById("email").value === "" ||
+          document.getElementById("mobno").value === "" ||
+          document.getElementById("msg").value === ""
+        ) {
+          alert("All fields are required.");
+        } else {
+          field1.style.display = "none";
+          field2.style.display = "none";
+          field3.style.display = "block";
+          document.getElementById("p3").classList.add("active-progress");
+          document.getElementById("line2").classList.add("active-line");
+        }
+      }
+      function back1() {
+        field1.style.display = "block";
+        field2.style.display = "none";
+        field3.style.display = "none";
+        document.getElementById("p2").classList.remove("active-progress");
+        document.getElementById("line1").classList.remove("active-line");
+      }
+      function back2() {
+        field1.style.display = "none";
+        field2.style.display = "block";
+        field3.style.display = "none";
+        document.getElementById("p3").classList.remove("active-progress");
+        document.getElementById("line2").classList.remove("active-line");
+      }
+      function check() {
+        if (document.getElementById("date").value === "") {
+          alert("Please enter a valid date");
+        }
+      }
+    </script>
+  </body>
+</html>
